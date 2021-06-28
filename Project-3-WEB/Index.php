@@ -4,9 +4,9 @@
 <head>
     <title>Informatie Verkiezingingen</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/css.css" />
-    <link rel="stylesheet" href="css/MenuContent.css" />
-
+    <link rel="stylesheet" href="css/style.cs"/>
+    <link rel="stylesheet" href="css/navigatie.cs"/>
+    
 </head>
 
 <body>
