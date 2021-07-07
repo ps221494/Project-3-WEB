@@ -26,9 +26,25 @@ class verkiezingDB
 
         try 
             {
+                $pdo = new PDO(self::DSN, self::USER, self::PASSWD);
+                $statement = $pdo->prepare("SELECT * FROM verkiezing");
+                $statement->execute();
+                $rows = $statement->fetchall(PDO::FETCH_ASSOC);
+                return $rows;
+            }
+            catch(PDOException $e) {
+                return false;
+            }
+        }
+
+        function SelectStemwijzer()
+        {
+
+        try 
+            {
               $pdo = new PDO(self::DSN, self::USER, self::PASSWD);
 
-              $statement = $pdo->prepare("SELECT * FROM verkiezing");
+              $statement = $pdo->prepare("SELECT * FROM standpunten");
 
               $statement->execute();
 
@@ -72,6 +88,24 @@ class verkiezingDB
             {
             return false;
             }
+        }
+
+        function SelectVerkiezingPartij($id)
+        {
+            try
+            {
+                $pdo = new PDO(self::DSN, self::USER, self::PASSWD);
+                $statement = $pdo->prepare("SELECT * FROM `verkiezingspartijen` WHERE `PartijId` = :id; ");
+                $statement->bindvalue(":id", $id, PDO::PARAM_INT);
+                $statement->execute();
+                $rows = $statement->fetchall(PDO::FETCH_ASSOC);
+                return $rows[0];
+            }
+            catch(PDOException $e) 
+            {
+                return false;
+            }
+
         }
     }
 

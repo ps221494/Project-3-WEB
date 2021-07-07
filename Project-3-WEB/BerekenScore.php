@@ -29,9 +29,6 @@ $db = new verkiezingDB();
                         <a href="Thema.php"><button class="MenuBtns">Thema's</button></a>
                     </div>
                     <div class="MenuBtnsDiv">
-                        <a href="Verkiezingen.php"><button class="MenuBtns">Verkiezingen</button></a>
-                    </div>
-                    <div class="MenuBtnsDiv">
                         <a href="Stemwijzer.php"><button class="MenuBtns">Stemwijzer</button></a>
                     </div>
                 </div>
@@ -41,19 +38,12 @@ $db = new verkiezingDB();
     <br>
     <center>
         <div>
-            <h1>Standpunten</h1>
+            <h1>Score</h1>
         </div>
-    <center>
-        <br>
+    </center>
+    <br>
     <div>
-    <table>
-    <?php
-    $rows = $db->SelectStandpunt($_POST['thema_id']);
-    echo "<tr>
-    <td id=Themas >$rows[Standpunt]</td>
-    </tr>";
-    ?>
-    </table>
+        
     </div>
-</body>
+    </body>
 </html>

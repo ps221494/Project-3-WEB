@@ -29,6 +29,9 @@ $db = new verkiezingDB();
                         <a href="Thema.php"><button class="MenuBtns">Thema's</button></a>
                     </div>
                     <div class="MenuBtnsDiv">
+                        <a href="Verkiezingen.php"><button class="MenuBtns">Verkiezingen</button></a>
+                    </div>
+                    <div class="MenuBtnsDiv">
                         <a href="Stemwijzer.php"><button class="MenuBtns">Stemwijzer</button></a>
                     </div>
                 </div>
@@ -42,7 +45,7 @@ $db = new verkiezingDB();
         </div>
     <center>
         <br>
-
+    <center>
         <div>
             <?php
 $rows = $db->SelectThemas();

@@ -9,8 +9,8 @@ $db = new verkiezingDB();
 <head>
     <title>Informatie Verkiezingingen</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.cs"/>
-    <link rel="stylesheet" href="css/navigatie.cs"/>
+    <link rel="stylesheet" href="css/style.cs" />
+    <link rel="stylesheet" href="css/navigatie.cs" />
 
 </head>
 
@@ -41,19 +41,23 @@ $db = new verkiezingDB();
     <br>
     <center>
         <div>
-            <h1>Standpunten</h1>
+            <h1>Partijen bij verkiezing:</h1>
         </div>
     <center>
-        <br>
+    <br>
     <div>
-    <table>
+        <center>
+        <div>
+        <table>
     <?php
-    $rows = $db->SelectStandpunt($_POST['thema_id']);
+    $rows = $db->SelectVerkiezingPartij($_POST['verkiezing_id']);
     echo "<tr>
-    <td id=Themas >$rows[Standpunt]</td>
+    <td id=Verkiezing >$rows[PartijId]</td>
     </tr>";
     ?>
     </table>
+        </div>
+        </center>
     </div>
 </body>
 </html>

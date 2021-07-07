@@ -21,8 +21,8 @@ body {
 
 #PartijGegevens
 {
-    text-align: center;
-    width:50%;
+    padding: 15px 0;
+    width:69%;
     max-height: 100%;
     font-size: 20px;
     color: whitesmoke;
@@ -35,6 +35,18 @@ body {
 {
     text-align: center;
     width:15%;
+    max-height: 100%;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: teal;
+    border-radius: 15px;
+    box-shadow: 7px 7px 3px darkslategray;
+}
+
+#Verkiezing
+{
+    text-align: center;
+    width:25%;
     max-height: 100%;
     font-size: 20px;
     color: whitesmoke;
